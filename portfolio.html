@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <style>
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(115deg, #b6efba, #7fe28a);
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #9d174d;
+        }
+
+        h2{
+            color: #0b4008;
+        }
+
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #b6efba;
+        }
+
+        .profile-pic {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 8px solid #7fe28a;
+            box-shadow: 0 10px 20px rgba(157, 23, 77, 0.2);
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 3em;
+            margin: 20px 0 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #9d174d;
+        }
+
+        /* Sections */
+        .section {
+            background-color: #82ce89;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About */
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Skills */
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skills li {
+            background-color: #7fe28a;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 30px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .skills li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(157, 23, 77, 0.5);
+        }
+
+        /* Hobbies */
+        .hobbies ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .hobbies li {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hobbies i {
+            font-size: 2em;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        /* Future Goals */
+        .future-goals {
+            background: #82ce89;
+            text-align: justify;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            background-color: #82ce89;
+            color: #006d45;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info a {
+            color: #006d45;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #fdf2f8;
+        }
+
+                /* Footer Styles */
+        footer {
+            background-color: #52a05b; /* Green background for footer */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            max-width: 1200px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        footer .footer-content p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons {
+            display: flex; /* Align icons in one line */
+            justify-content: center; /* Center the icons horizontally */
+            margin-top: 10px;
+        }
+
+        footer .social-icon {
+            margin: 0 15px; /* Space between icons */
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icon:hover {
+            color: #f1b2f7; /* Hover effect */
+        }
+
+
+        /* Responsive Design Enhancements */
+        @media (max-width: 1024px) {
+            header {
+                padding: 40px 0;
+            }
+
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+
+            .name {
+                font-size: 2.5em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .skills li {
+                padding: 8px 16px;
+                margin: 5px;
+                font-size: 0.8em;
+            }
+
+            .hobbies ul {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .hobbies li {
+                flex: 1 1 calc(50% - 20px);
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .section {
+                margin-left: 10px; /* Adjust as needed */
+                margin-right: 10px; /* Adjust as needed */
+            }
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .skills ul {
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+            }
+
+            .skills li {
+                width: auto;
+                text-align: center;
+            }
+
+            .hobbies ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hobbies li {
+                width: auto;
+            }
+
+            .contact-info {
+                padding: 20px;
+                font-size: 0.9em;
+                margin-left: 10px; /* Adjust as needed */
+                margin-right: 10px; /* Adjust as needed */
+            }
+
+            footer .social-icons {
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-left: 10px; /* Adjust as needed */
+                margin-right: 10px; /* Adjust as needed */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .name {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+            }
+
+            .skills li {
+                font-size: 0.7em;
+            }
+
+            .hobbies li i {
+                font-size: 1.5em;
+            }
+
+            footer .social-icon {
+                font-size: 1.2em;
+                margin: 0 10px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-pic">
+            <img src="https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg" alt="Profile Picture">
+        </div>
+        <h1 class="name">Hi, I'm shani patel</h1>
+        <p class="subtitle">Student at Silver Oak University</p>
+    </header>
+
+    <main class="container">
+        <section class="section about">
+            <h2>About Me</h2>
+            <p>I am a passionate and dedicated student currently pursuing my Bachelor's in Computer Science at Silver Oak University. With a strong foundation in programming, problem-solving, and teamwork, I enjoy exploring innovative technologies and applying them to practical projects. Beyond academics, I am driven by curiosity and a commitment to continuous learning. My goal is to grow as a skilled professional who can contribute meaningfully to impactful solutions while leaving a positive mark in the tech industry.</p>
+        </section>
+
+        <section class="section skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>MySQL</li>
+                <li>BOOTSTRAP5</li>
+                <li>Presentation</li>
+                <li>Teamwork</li>
+                <li>Leadership</li>
+                <li>Communication</li>
+                <li>Problem-solving</li>
+                <li>Report writing</li>
+                <li>Time management</li>
+            </ul>
+        </section>
+
+        <section class="section hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li><i class="fas fa-book"></i><br>Reading</li>
+                <li><i class="fas fa-music"></i><br>Music</li>
+                <li><i class="fas fa-campground"></i><br>Camping</li>
+                <li><i class="fas fa-plane"></i><br>Travelling</li>
+                <li><i class="fas fa-laptop-code"></i><br>Coding</li>
+            </ul>
+        </section>
+        
+
+        <section class="section future-goals">
+            <h2>Future Goals</h2>
+            <p>My future goal is to become a proficient software developer, leveraging my technical skills in programming, problem-solving, and innovative thinking to create impactful solutions. I aim to work on projects that enhance user experiences while addressing real-world challenges. With a focus on continuous learning, I aspire to contribute to the tech industry by developing sustainable and scalable applications. My ultimate ambition is to lead projects that drive positive change in society through technology.</p>
+        </section>
+
+        <section class="contact-info">
+            <h2>Let's Connect</h2>
+            <p>Email: <a href="patidarshani3950@gmail.com">sp419944@gmail.com</a></p>
+            <p>Mobile: <a href="tel:+919316983207">+91 93130 75623</a></p>
+            <p>Patan, Gujarat, India</p>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 shani patel. All rights reserved.</p>
+                <div class="social-icons">
+
+                    <a href="https://www.instagram.com/shaniii__24?igsh=MTQ1ejN4amx0am41NQ==" class="social-icon"><i class="fab fa-instagram"></i></a>                    
+                    <a href="https://github.com/Shani2406" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </footer>
+        
+    </main>
+</body>
+</html>
